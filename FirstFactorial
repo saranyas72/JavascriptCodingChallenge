@@ -1,0 +1,15 @@
+function FirstFactorial(num) { 
+  var result=num;
+  if(num<=0)
+  {
+      print("Enter a natural number to find its factorial ie. number which is greater than 0");
+  } else{
+      for(var i=num; i>1; i--)
+      {
+          result = result*(i-1);
+      }
+  }
+     
+     return result;     
+}
+FirstFactorial(readline());
