@@ -1,25 +1,30 @@
 function LetterChanges(str) { 
-var alphabets="abcdefghijklmnopqrstuvwxyz".split("");
+var charsToChange="abcdefghijklmnopqrstuvwxyz".split("");
 str=str.toLowerCase().split("");
 var replaceChar="";
 for(var i=0;i<str.length;i++)
 {
-    if(str[i]===(" "))
+    if(charsToChange.includes(str[i]))
     {
-        replaceChar+=" ";
-    }else{
-        var place=alphabets.indexOf(str[i]);
-        if(place==25)
+        if(str[i]=="z")
         {
-            replaceChar+=alphabets[0].toUpperCase();
-        }else{
-            var val = alphabets[place+1];
+           replaceChar+=charsToChange[0].toUpperCase(); 
+        }
+        else
+        {
+            var val = charsToChange[charsToChange.indexOf(str[i])+1];
             if(val.includes('a')||val.includes('e')||val.includes('i')||val.includes('o')||val.includes('u'))
             {
                 replaceChar+=val.toUpperCase();
             }else
-              { replaceChar+= val;}
+            { 
+                replaceChar+= val;
+            } 
         }
+    }
+    else
+    {
+        replaceChar+=str[i];
     }
 }
  return replaceChar; 
