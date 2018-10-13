@@ -1,0 +1,13 @@
+function TimeConvert(num) { 
+  if(num<60)
+  {
+      hour=0;
+      minute=num;
+  }
+  else{
+  hour=Math.round(num/60);
+  minute=num%60;
+  }  
+   return hour+":"+minute;
+} 
+TimeConvert(readline());
