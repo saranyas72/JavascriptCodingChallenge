@@ -1,0 +1,17 @@
+function LongestWord(sen) { 
+    var wrdLength=0;
+    var strArray=sen.split(" ");
+    var longestWord="";
+
+  for(i=0;i<strArray.length;i++)
+  {
+      var strWrdReplaced=strArray[i].replace(/[^\w+]/g,"");
+      if(strWrdReplaced.length>wrdLength)
+      {
+          wrdLength=strWrdReplaced.length;
+          longestWord=strWrdReplaced;
+      }
+  }
+  return longestWord; 
+}
+LongestWord(readline());
