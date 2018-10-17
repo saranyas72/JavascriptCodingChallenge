@@ -1,0 +1,8 @@
+function AlphabetSoup(str) { 
+    
+    var strArray=str.split("").sort();
+  return strArray.toString().replace(/,/g,"").trim(); 
+         
+}
+
+AlphabetSoup(readline());
