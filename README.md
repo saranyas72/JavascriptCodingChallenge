@@ -1,2 +1,2 @@
 # JavascriptCodingChallenge
-This repository is to display the JS coding challenges taken in CoderByte
+This repository is to display the JS coding challenges
